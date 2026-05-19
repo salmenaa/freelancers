@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Add Housing Request</title>
+  <link rel="stylesheet" href="assets/css/add-housing.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Add Housing Request</h1>
+
+    <form id="housingForm" class="form">
+      <div class="row">
+        <label for="rentAmount">Rent amount (required)</label>
+        <input id="rentAmount" name="rentAmount" type="number" step="0.01" min="0" required>
+      </div>
+
+      <div class="row">
+        <label for="ownerName">Owner name (required)</label>
+        <input id="ownerName" name="ownerName" type="text" required>
+      </div>
+
+      <div class="row two-col">
+        <div>
+          <label for="dateFrom">Date from (required)</label>
+          <input id="dateFrom" name="dateFrom" type="date" required>
+        </div>
+        <div>
+          <label for="dateTo">Date to (required)</label>
+          <input id="dateTo" name="dateTo" type="date" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="attachment">Attachment (optional) — image or PDF</label>
+        <input id="attachment" name="attachment" type="file" accept="image/*,application/pdf">
+        <div id="attachmentInfo" class="muted"></div>
+      </div>
+
+      <div class="row">
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Submit Request</button>
+      </div>
+
+      <div id="message" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="assets/js/add-housing.js"></script>
+</body>
+</html>
